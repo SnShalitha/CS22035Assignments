@@ -2,6 +2,10 @@ package A2;
 
 public class accountant extends employee {
 
+    accountant(String inNIC, String inName, int inNumber, String inEmail, String inEmpID, double inSal, String inDept) {
+        super(inNIC, inName, inNumber, inEmail, inEmpID, inSal, inDept);
+    }
+
     void generateTicketsIssued(station inStation)
     {
         System.out.println("Station "+inStation.stationName+" has issued "+inStation.inCount+" tickets");
@@ -14,7 +18,7 @@ public class accountant extends employee {
 
     void totalTripsPerCommuter(user inUser)
     {
-        System.out.println(inUser.name+" has had "+inUser.tickets.length+" trips");
+        System.out.println(inUser.name+" has had "+inUser.tickets+" trips");
     }
 
     void incomeRailway(railway inRailway)

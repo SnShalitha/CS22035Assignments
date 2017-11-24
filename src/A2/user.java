@@ -3,20 +3,27 @@ package A2;
 public class user {
     public String NIC;
     public String name;
-    public int contact;
+    public int contactNumber;
     public String email;
-    public ticket tickets[];
+    public ticket tickets;
 
+    user(String inNIC,String inName,int inNumber,String inEmail)
+    {
+        this.NIC = inNIC;
+        this.name = inName;
+        this.contactNumber = inNumber;
+        this.email = inEmail;
+    }
     void enterStation(station inStation,train inTrain)
     {
-        tickets[tickets.length+1] = new ticket(inStation,inTrain);
+        tickets = new ticket(inStation,inTrain);
     }
 
     void exitStation(station outStat)
     {
-        tickets[tickets.length].issueTicket(outStat);
-        this.calculateCost(tickets[tickets.length]);
-        System.out.println("Ticket ID"+tickets[tickets.length].ticketID+" cost is Rs."+tickets[tickets.length].cost);
+        tickets.issueTicket(outStat);
+        this.calculateCost(tickets);
+        System.out.println("Ticket ID"+tickets.ticketID+" cost is Rs."+tickets.cost);
     }
 
     void calculateCost(ticket inTicket)
