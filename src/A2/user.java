@@ -1,3 +1,5 @@
+package A2;
+
 public class user {
     public String NIC;
     public String name;

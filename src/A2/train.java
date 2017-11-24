@@ -1,3 +1,5 @@
+package A2;
+
 public class train {
     public String trainID;
     public int numberOfPassengers;

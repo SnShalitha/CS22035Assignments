@@ -1,3 +1,5 @@
+package A2;
+
 public class station {
     public String stationID;
     public String stationName;

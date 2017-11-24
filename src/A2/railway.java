@@ -1,3 +1,5 @@
+package A2;
+
 public class railway {
     public String railwayName;
     public int tripCount;

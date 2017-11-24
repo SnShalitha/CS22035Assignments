@@ -1,3 +1,5 @@
+package A2;
+
 public class employee extends user {
     public String empID;
     public double salary;
